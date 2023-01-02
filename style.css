@@ -99,6 +99,8 @@ body * {
   height: 24px;
   background: var(--surface-color);
   border: 1px var(--stroke-color);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
   border-radius: 9999px;
 }
 
@@ -146,6 +148,8 @@ ul li a:hover {
   align-items: center;
   justify-content: center;
   padding: 16px;
+  
+  transition: background 0.2s;
   border-radius: 50%;
 }
 
