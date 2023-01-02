@@ -39,7 +39,6 @@ body * {
 #container {
   width: 100%;
   max-width: 588px;
-  height: 712px;
   margin: 56px auto 0px; /* alinhar a caixa não o conteudo da caixa no centro usa a propriedade margin*/
   padding: 0 24px;
 }
@@ -81,11 +80,16 @@ body * {
   z-index: 1; /*para subir uma posição*/
   left: 0;
   transform: translateY(-50%);
+
+  animation: slide-back .2s;
 }
 
 .light #switch button {
-  right: 0;
-  left: initial;
+  animation: slide-in .2s forwards;
+}
+
+#switch button:hover{
+  outline: 8px solid var(--highlight-color);  
 }
 
 #switch span {
@@ -169,4 +173,24 @@ a {
   .light {
     --bg-url: url(./assets/bg-light.jpg);
   }
+}
+
+/* Animações */
+
+@keyframes slide-in{
+    from {
+      left:0;
+    }
+    to{
+      left: 50%;
+    }
+}
+
+@keyframes slide-back{
+    from {
+      left: 50%;
+    }
+    to{
+      left: 0;
+    }
 }
