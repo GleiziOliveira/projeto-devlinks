@@ -37,7 +37,8 @@ body * {
 }
 
 #container {
-  width: 360px;
+  width: 100%;
+  max-width: 588px;
   height: 712px;
   margin: 56px auto 0px; /* alinhar a caixa não o conteudo da caixa no centro usa a propriedade margin*/
   padding: 0 24px;
